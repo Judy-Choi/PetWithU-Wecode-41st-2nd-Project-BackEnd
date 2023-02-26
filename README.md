@@ -214,6 +214,7 @@ It also reduces traffic overload and execution time (prevent delivering too much
 ## 💡 Improved Works
 <details>
     <summary>Read more</summary>
+    
 ### JWT is too weak...
 - 💡 Social login & sign in with Kakao SDK for JavaScript
     - Improve both security and user convenience
@@ -258,18 +259,18 @@ It also reduces traffic overload and execution time (prevent delivering too much
 <details>
     <summary>Read more</summary>
  
-### In the Dao Layer, Transaction(Query Runner) often works abnormally.
-- ☠️ The reason is unknown and the problem is not resolved... 😂
+- In the Dao Layer, Transaction(Query Runner) often works abnormally.
+    - ☠️ The reason is unknown and the problem is not resolved... 😂
    
-### When we tried VScode SSH remote debugging to AWS EC2 server, server responded very late.
-- ☠️ The reason is unknown...
+- When we tried VScode SSH remote debugging to AWS EC2 server, server responded very late.
+    - ☠️ The reason is unknown...
     
-### API Documentation Tool
-- Malform Header error is occured when Multer tested with Postman
-  - 💡 Postman's own bug so we used Insomenia instead.
-- Is the Postman the best?
-    - 💡 We can try other API documentation tool than Postman / Insomenia
-        - ex) Swagger
+- API Documentation Tool
+    - Malform Header error is occured when Multer tested with Postman
+      - 💡 Postman's own bug so we used Insomenia instead.
+    - Is the Postman the best?
+        - 💡 We can try other API documentation tool than Postman / Insomenia
+            - ex) Swagger
     
 
 
