@@ -138,74 +138,77 @@ Communication
 #### Main Page
 - Efficient request from FE by using query parameters
 - Pagination
-  - Request query를 이용하여 FE에서 요청하는 카테고리 페이지 정보를 효율적으로 요청받음
   - In order to support Page Nation of FE, default 9 datas (per page) are extracted from DB and provided to FE.
-It also reduces traffic overload and execution time (prevent delivering too much data at once)
-- 로그인한 사용자가 팔로우하는 사용자가 작성한 게시글만 조회
-    1. 팔로우하는 사용자 ID 를 얻어서
-    2. 해당 ID가 작성한 게시글을 최신 순으로 pagination 크기만큼 정렬
-- Flag 를 사용하여 Feed Main 에 필요한 정보만 리턴되도록 하여 효율성 증대
-- 좋아요 / 스크랩 / 댓글 조회 지원
-    - 좋아요 및 스크랩 버튼 클릭 시 Toggle 형태로 FE 에서 간편하게 상태 변경 결과를 알 수 있게 함
+    - It also reduces traffic overload and execution time (prevent delivering too much data at once)
+- View only posts written by users who are followed by logged in users
+    1. Get the user ID you follow.
+    2. Sort the posts written by the ID by the latest order by the size of the pagination.
+- Increase efficiency by using Flag to return only the information needed for Feed Main
+- Like / Collection / Review
+    - Click the Like and Collection button to see easily the results of the status change in FE (toggle)
     
 #### Detail Page
-- 좋아요 / 스크랩
-    - 좋아요 및 스크랩 버튼 클릭 시 Toggle 형태로 FE 에서 간편하게 상태 변경 결과를 알 수 있게 함
-- 댓글 조회 / 등록 / 삭제 지원
-    - 댓글 생성 시 사용자 정보를 FE 에 리턴하여 작성자 정보를 알 수 있게 함.
+- Like / Collection / Review
+    - Click the Like and Collection button to see easily the results of the status change in FE (toggle)
+- Review - Create / Read / Delete
+    - User information is returned to FE when a reivew is created
     
 #### Collection(Scraped posts) Page
-- 사용자가 스크랩한 게시글을 한 페이지에서 조회할 수 있도록 하여 사용자 편의성 증대
+- Increase user convenience by allowing users to view collected posts on a page
 
 ### 📝 Feed (Special Options)
-#### 글쓰기
+#### Create post
 - Bulk INSERT
-    - Bulk Insert 를 이용하여 많은 양의 데이터를 하나의 INSERT 쿼리로 DB에 저장
-        - 수행시간 최소화, 하나의 쿼리만을 사용하므로 효율성 증대
+    - Store large amounts of data in DB with Bulk Insert
+        - Minimize execution time, increase efficiency by using only one query
 - Multer & AWS S3
-    - 이미지 업로드를 위해 Multer 미들웨어 사용
-        1. FE로부터 이미지 파일을 전달받아 S3에 저장
-        2. 이미지 S3 url을 DB 에 저장
-#### 상품 검색
-- FE로부터 검색할 키워드를 request 쿼리로 전달받아 DB에서 검색
-    - 키워드를 포함하는 상품정보를 판매량 순으로 정렬하여 최대 10개 리턴
+    - Multer middleware for image upload
+        1. Store image file from FE to S3
+        2. Store S3 image url to DB
+#### Search Products
+- Receive keywords from FE with request query and search in DB
+    - Return up to 10 items by sorting product information including keywords order by sales volume
     
 ### 🏞️ Promenade
-모든 API가 수행되기 전에 로그인한 사용자의 JWT 를 검증하여 사용자 인증 후 인가.   
-지도 API (카카오맵) 을 이용한 산책로 위치 표시
-
+Authorization after user authentication by verifying the JWT of the signed-in user before all APIs are runned.  
+Displaying the location of the promenade using the map API (Kakao Map)
+    
 #### Main Page
-- Request query 를 이용하여 FE에서 요청하는 페이지 정보를 효율적으로 요청받음
-- 카테고리(시, 행정구) 별 조회 시 Query 재사용성 증대
-  - 카테고리별(시, 행정구) 게시물 조회 시 비슷한 SQL 쿼리가 반복하여 사용되는 것을 최소화하고자 중복되는 쿼리는 defaultQuery 문자열로 한 번만 선언한 뒤 각 페이지에서 필요한 추가 쿼리를 덧붙여 사용
-- Pagination 지원
-  - Request query를 이용하여 FE에서 요청하는 카테고리 페이지 정보를 효율적으로 요청받음
-  - FE 의 Pagination 을 효과적으로 지원하기 위해 DB에서 데이터 추출 시 Pagination 단위만큼 데이터를 추출하여 FE에 제공
-  - 한번에 너무 많은 데이터를 전달할 경우 발생하는 트래픽 과부하 및 수행 시간을 줄이는 효과도 있음.
-- Flag 를 사용하여 산책로 Main 에 필요한 정보만 리턴되도록 하여 효율성 증대
-- 좋아요 / 스크랩 / 댓글 조회 지원
-    - 좋아요 및 스크랩 버튼 클릭 시 Toggle 형태로 FE 에서 간편하게 상태 변경 결과를 알 수 있게 함
+- Efficient request from FE by using query parameters
+- Increasing Query reuse when filtering by category (city, administrative district)
+  - Minimize repeated use of similar SQL queries when viewing posts
+    - Duplicate queries are declared with defaultQuery string only once, and then we joinned additional query
+
+- Pagination
+  - In order to support Page Nation of FE, default 9 datas (per page) are extracted from DB and provided to FE.
+    - It also reduces traffic overload and execution time (prevent delivering too much data at once)
+    
+- Increase efficiency by using Flag to return only the information needed for Feed Main
+- Like / Collection / Review
+    - Click the Like and Collection button to see easily the results of the status change in FE (toggle)
 
 #### Detail Page
-- FE 에서 카카오맵 API를 사용하기 위해 필요한 정보 저장 (장소명, 장소 ID, 위도, 경도 저장)
-- 좋아요 / 스크랩
-    - 좋아요 및 스크랩 버튼 클릭 시 Toggle 형태로 FE 에서 간편하게 상태 변경 결과를 알 수 있게 함
-- 댓글 조회 / 등록 / 삭제 지원
-    - 댓글 생성 시 사용자 정보를 FE 에 리턴하여 작성자 정보를 알 수 있게 함.
+- Store the information needed to use Kakao Map API in FE (place name, place ID, latitude, longitude)
+- Like / Collection / Review
+    - Click the Like and Collection button to see easily the results of the status change in FE (toggle)
+- Review - Create / Read / Delete
+    - User information is returned to FE when a reivew is created
     
 #### Collection(Scraped posts) Page
-- 사용자가 스크랩한 게시글을 한 페이지에서 조회할 수 있도록 하여 사용자 편의성 증대
-- 스크랩한 게시글의 지도 정보(장소 좌표)를 모두 리턴하여 하나의 지도 위에 모든 장소 좌표가 표기될 수 있도록 지원. 사용자 편의성 증대.
+- Increase user convenience by allowing users to view collected posts on a page
+- Returns all the map information (place coordinates) of the collected post so that all place coordinates can be displayed on a single map.
+    - Increase user convenience.
 
 ### 🛒 Carts
-모든 API가 수행되기 전에 로그인한 사용자의 JWT 를 검증하여 사용자 인증 후 인가.
+Authorization and authentication using JWT
+- Verify logged-in user's JWT before all APIs are performed.
 
-#### 장바구니 추가/수량 변경
-- UPSERT 구문을 사용하여 하나의 API 및 하나의 쿼리 내에서 INSERT와 UPDATE가 동시에 이루어지도록 구현
+#### Add product to shopping cart / change quantity
+- Implementing INSERT and UPDATE simultaneously within one API and one query using 'UPSERT'
 
-#### 장바구니 조회 / 삭제
-- INNER JOIN 쿼리를 조합하여 JWT 단 하나만으로 사용자 장바구니의 모든 정보를 조회할 수 있도록 구현 (정보 노출 최소화 및 보안 강화)
-- Bulk Delete 를 이용하여 여러 개의 장바구니 삭제를 하나의 Query 로 수행
+#### Lookup Shopping cart / delete product in the cart
+- Combine 'INNER JOIN' to get all information of the shopping cart with just one JWT (minimize information exposure and enhance security)
+- Delete multiple shopping carts as a single query with Bulk Delete
 
 </details>
 
@@ -219,7 +222,7 @@ It also reduces traffic overload and execution time (prevent delivering too much
 - 💡 Social login & sign in with Kakao SDK for JavaScript
     - Improve both security and user convenience
 
-### Our DB are in each member's local...
+### Our DB is in only BE's local...
 - Could not share same DB & Could not test our module in the same environment
     - 💡 All team members use one DB in any time with AWS RDS
     - 💡 Share one DB when uploading an image file with AWS S3
@@ -237,6 +240,10 @@ It also reduces traffic overload and execution time (prevent delivering too much
 - Switching test branches makes interrupt, also it's annoying to integrate the code.
   - 💡 Create an AWS EC2 instance and pull source code from the GitHub repository using git
     - Real-time testing is available
+    
+### Bulk Insert / Delete
+- We had to use same queries with different values several times.
+  - 💡 Make values into one array and use bulk insert / delete
     
 ### API Documentation
 - I don't know what API I developed because I developed more than 20 😂
@@ -272,6 +279,4 @@ It also reduces traffic overload and execution time (prevent delivering too much
         - 💡 We can try other API documentation tool than Postman / Insomenia
             - ex) Swagger
     
-
-
 </details>
