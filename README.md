@@ -83,19 +83,19 @@ Communication
 
 | Page | Screenshot | Developer |
 | --- | --- | --- |
-| DB 설계<br>Migration | <p align="center"><img src="https://user-images.githubusercontent.com/53294075/218289356-eff87768-d75e-4eee-aaa6-018ba378cd1b.png" width = "600px"></p><br>[Detail LINK](https://github.com/wecode-bootcamp-korea/41-2nd-PetWithU-backend/issues/5) | [BE] Judy Choi |
-| 메인 화면<br>Nav Bar<br>Footer | <p align="center"><img src="https://user-images.githubusercontent.com/53294075/218318656-9fd2e054-85cc-4b21-b408-4e02aa701cea.png" width = "400px"></p> | [FE] KM Bae <br> [BE] Judy Choi |
-| Kakao 로그인 | <p align="center"><video src="https://user-images.githubusercontent.com/53294075/218317950-ed1901e7-c407-46fb-8ab4-2c0ce5aa0889.mov" width = "400px"></video></p> | [FE] KM Bae <br> [BE] Judy Choi |
-| 피드 메인 | <p align="center"><video src="https://user-images.githubusercontent.com/53294075/218318417-6f7905c4-79b8-4189-9039-b74448c77f1e.mov" width = "400px"></video></p> | [FE] KM Bae <br> [BE] Judy Choi |
-| 피드 디테일 | <p align="center"><img src="https://user-images.githubusercontent.com/53294075/218318656-9fd2e054-85cc-4b21-b408-4e02aa701cea.png" width = "400px"></p> | [FE] NH Kwon <br> [BE] Judy Choi |
-| 피드 스크랩<br>모아보기 | <p align="center"><img src="https://user-images.githubusercontent.com/53294075/218318656-9fd2e054-85cc-4b21-b408-4e02aa701cea.png" width = "400px"></p> | [FE] KM Bae <br> [BE] Judy Choi |
-| 피드 글쓰기 | <p align="center"><img src="https://user-images.githubusercontent.com/53294075/218318751-77832b5f-7fcc-4dff-8812-6f60e7dc3a52.png" width = "400px"></p> | [FE] NH Kwon <br> [BE] Judy Choi |
-| 상품 검색 | <p align="center"><img src="https://user-images.githubusercontent.com/53294075/218318797-f28cea71-fff5-40cf-a519-34a46c763052.png" width = "400px"></p> | [FE] KM Bae <br> [BE] Judy Choi |
-| 상품 디테일 | <p align="center"><img src="https://user-images.githubusercontent.com/53294075/218318852-d5d7c057-b2b5-4e75-9f2d-fdc41e526791.png" width = "400px"></p> | [FE] NH Kwon <br> [BE] Judy Choi |
-| 산책로 메인 | <p align="center"><img src="https://user-images.githubusercontent.com/53294075/218318951-24fb9ded-472f-4d3a-9755-0efb4e669960.png" width = "400px"><br><img src="https://user-images.githubusercontent.com/53294075/218319054-81b68955-4a06-4bf4-9ce6-ab55712eaeaa.png" width = "400px"></p> | [FE] SY Kang <br> [BE] Judy Choi |
-| 산책로 디테일 | <p align="center"><img src="https://user-images.githubusercontent.com/53294075/218318977-84391381-218b-4348-9f12-10e5101cb1af.png" width = "400px"></p> | [FE] SY Kang <br> [BE] Judy Choi |
-| 산책로 스크랩<br>모아보기 | <p align="center"><img src="https://user-images.githubusercontent.com/53294075/218319020-56fc3d6f-4c59-4039-85b2-dce1944f5080.png" width = "400px"></p> | [FE] SY Kang <br> [BE] Judy Choi |
-| 장바구니 | FE 캡쳐 미제공  | [FE] 권나현 <br> [BE] 최민주 |
+| DB Architecture/<br>Migration | <p align="center"><img src="https://user-images.githubusercontent.com/53294075/218289356-eff87768-d75e-4eee-aaa6-018ba378cd1b.png" width = "600px"></p><br>[Detail LINK](https://github.com/wecode-bootcamp-korea/41-2nd-PetWithU-backend/issues/5) | [BE] Judy Choi |
+| Main<br>Nav Bar<br>Footer | <p align="center"><img src="https://user-images.githubusercontent.com/53294075/218318656-9fd2e054-85cc-4b21-b408-4e02aa701cea.png" width = "400px"></p> | [FE] KM Bae <br> [BE] Judy Choi |
+| Kakao Login | <p align="center"><video src="https://user-images.githubusercontent.com/53294075/218317950-ed1901e7-c407-46fb-8ab4-2c0ce5aa0889.mov" width = "400px"></video></p> | [FE] KM Bae <br> [BE] Judy Choi |
+| Feed Main | <p align="center"><video src="https://user-images.githubusercontent.com/53294075/218318417-6f7905c4-79b8-4189-9039-b74448c77f1e.mov" width = "400px"></video></p> | [FE] KM Bae <br> [BE] Judy Choi |
+| Feed Detail | <p align="center"><img src="https://user-images.githubusercontent.com/53294075/218318656-9fd2e054-85cc-4b21-b408-4e02aa701cea.png" width = "400px"></p> | [FE] NH Kwon <br> [BE] Judy Choi |
+| Feed<br>Collection | <p align="center"><img src="https://user-images.githubusercontent.com/53294075/218318656-9fd2e054-85cc-4b21-b408-4e02aa701cea.png" width = "400px"></p> | [FE] KM Bae <br> [BE] Judy Choi |
+| Feed<br>Create | <p align="center"><img src="https://user-images.githubusercontent.com/53294075/218318751-77832b5f-7fcc-4dff-8812-6f60e7dc3a52.png" width = "400px"></p> | [FE] NH Kwon <br> [BE] Judy Choi |
+| Search<br>Products | <p align="center"><img src="https://user-images.githubusercontent.com/53294075/218318797-f28cea71-fff5-40cf-a519-34a46c763052.png" width = "400px"></p> | [FE] KM Bae <br> [BE] Judy Choi |
+| Product<br>detail | <p align="center"><img src="https://user-images.githubusercontent.com/53294075/218318852-d5d7c057-b2b5-4e75-9f2d-fdc41e526791.png" width = "400px"></p> | [FE] NH Kwon <br> [BE] Judy Choi |
+| Promenade<br>Main | <p align="center"><img src="https://user-images.githubusercontent.com/53294075/218318951-24fb9ded-472f-4d3a-9755-0efb4e669960.png" width = "400px"><br><img src="https://user-images.githubusercontent.com/53294075/218319054-81b68955-4a06-4bf4-9ce6-ab55712eaeaa.png" width = "400px"></p> | [FE] SY Kang <br> [BE] Judy Choi |
+| Promenade<br>Detail | <p align="center"><img src="https://user-images.githubusercontent.com/53294075/218318977-84391381-218b-4348-9f12-10e5101cb1af.png" width = "400px"></p> | [FE] SY Kang <br> [BE] Judy Choi |
+| Promenade<br>Collection | <p align="center"><img src="https://user-images.githubusercontent.com/53294075/218319020-56fc3d6f-4c59-4039-85b2-dce1944f5080.png" width = "400px"></p> | [FE] SY Kang <br> [BE] Judy Choi |
+| Carts | FE to be continued..  | [FE] NH Kwon <br> [BE] Judy Choi |
     
 </details>
 
@@ -106,42 +106,41 @@ Communication
 
 <br>
 
-## 🛠️ 구현 상세
+## 🛠️ Dev Details
 
 <details>
-    <summary>상세보기</summary>
+    <summary>Details</summary>
     
 ### 🗄️ Server & DataBase
-- AWS RDS 에 DB를 구축하여 FE 및 사용자가 언제든지 원활하게 DB를 이용할 수 있도록 지원.
+- Set DB on AWS RDS to enable FE and users to access DB at any time.
 
 ### 👨‍👩‍👧‍👦 Users
 #### Login / Sign Up
-- Kakao SDK for JavaScript 를 이용한 카카오톡 소셜 로그인 및 회원가입 구현
-- 로그인 성공 시 서버에서 secret key 를 이용하여 JWT 생성
-- 로그인 후 사용자 인증/인가에 패스워드 대신 JWT 를 사용하여 보안성 향상
-- Bcrypt를 사용하여 비밀번호를 암호화하여 DB에 저장
-  - 사용자의 계정 정보를 더욱 안전하게 관리
+- Social login and sign in with Kakao SDK for JavaScript
+- After login, use JWT instead of password for user authentication/authorization (to improve security)
+- Encrypt user's password using Bcrypt and save it to DB
+    - Manage user's account information more securely
 
 #### Follow / Following
-- 사용자 간 팔로우 / 팔로잉 지원
+- Follow / Following between users
 
 ### 🦴 Products
 #### Main page
-- 오늘의 제품 : 판매량을 기준으로 각 카테고리별로 내림차순 정렬 후 상위 1개 제품만 DB에서 추출
-- 모든 제품 : 모든 제품을 판매량을 기준으로 내림차순 정렬하여 DB에서 추출
+- Today's products : Sort each category's products in descending order by sales volume and extract only the top 1 product 
+- All products : Sort all products in descending order by sales volume
 
 #### Detail page
-- 특정 제품의 세부 정보 조회
+- View the details of the product
 
 ### 🖼️ Feed
-모든 API가 수행되기 전에 로그인한 사용자의 JWT 를 검증하여 사용자 인증 후 인가.
+- Authorization after user authentication by verifying the JWT of the signed-in user before all APIs are runned.
 
 #### Main Page
-- Request query 를 이용하여 FE에서 요청하는 페이지 정보를 효율적으로 요청받음
-- Pagination 지원
+- Efficient request from FE by using query parameters
+- Pagination
   - Request query를 이용하여 FE에서 요청하는 카테고리 페이지 정보를 효율적으로 요청받음
-  - FE 의 Pagination 을 효과적으로 지원하기 위해 DB에서 데이터 추출 시 Pagination 단위만큼 데이터를 추출하여 FE에 제공
-  - 한번에 너무 많은 데이터를 전달할 경우 발생하는 트래픽 과부하 및 수행 시간을 줄이는 효과도 있음.
+  - In order to support Page Nation of FE, default 9 datas (per page) are extracted from DB and provided to FE.
+It also reduces traffic overload and execution time (prevent delivering too much data at once)
 - 로그인한 사용자가 팔로우하는 사용자가 작성한 게시글만 조회
     1. 팔로우하는 사용자 ID 를 얻어서
     2. 해당 ID가 작성한 게시글을 최신 순으로 pagination 크기만큼 정렬
@@ -212,14 +211,14 @@ Communication
 
 <br>
 
-## 🤔 아쉬웠던 점 & 개선방법
+## 🤔 Future Works
 
 <details>
-    <summary>더보기</summary>
+    <summary>Read more</summary>
   
-### JWT 만으로는 보안상 취약하다
-- 💡 추가적인 보안 기능을 도입한다.
-    - Kakao SDK for JavaScript 를 이용한 카카오톡 소셜 로그인 및 회원가입을 도입하여 보안성과 사용자 편의성 모두 향상
+### JWT is too weak...
+- 💡 Social login & sign in with Kakao SDK for JavaScript
+    - Improve both security and user convenience
 
 ### 팀 멤버들이 완전히 동일한 DB를 사용할 수 없어서 테스트 환경에 차이가 난다
 - 💡 AWS RDS 를 이용해 모든 팀원이 하나의 DB를 사용
