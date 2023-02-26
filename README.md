@@ -211,51 +211,66 @@ It also reduces traffic overload and execution time (prevent delivering too much
 
 <br>
 
-## 🤔 Future Works
-
+## 💡 Improved Works
 <details>
     <summary>Read more</summary>
-  
 ### JWT is too weak...
 - 💡 Social login & sign in with Kakao SDK for JavaScript
     - Improve both security and user convenience
 
-### 팀 멤버들이 완전히 동일한 DB를 사용할 수 없어서 테스트 환경에 차이가 난다
-- 💡 AWS RDS 를 이용해 모든 팀원이 하나의 DB를 사용
-- 💡 AWS S3 를 이용해 이미지 파일 업로드 시 하나의 DB를 공유
+### Our DB are in each member's local...
+- Could not share same DB & Could not test our module in the same environment
+    - 💡 All team members use one DB in any time with AWS RDS
+    - 💡 Share one DB when uploading an image file with AWS S3
     
-### 비효율적인 FE-BE 연결 테스트
-- 한 번에 서버 1개만 켤 수 있었다
-  - 💡 포트 번호를 바꿔서 서버를 켠다.
-- 관리자(멘토) 가 PR에 피드백을 주고 Main 브랜치에 merge 할 때까지 기다려야 했다.
-- 기능이 각 브랜치에 나누어 구현되어 있으므로 서로 다른 기능을 테스트하기 위해서는 브랜치를 계속 전환해야 했다.
-  - 💡 테스트 브랜치를 한 개 생성하여 모든 코드를 통합하여 사용한다.
-- 포트 번호를 바꿔서 테스트 브랜치 서버를 실행할 경우, 개발 서버에서 디버거 실행 시 테스트 브랜치 프로세스에 붙는다.
-- 테스트 브랜치를 전환하는 작업이 번거롭고, 코드를 통합하는 데에도 리소스가 든다.
-  - 💡 AWS EC2 인스턴스 생성 후 git 을 이용해 GitHub 리포지토리로부터 소스코드를 pull 받아와서 테스트한다.
-    - FE 와 BE 모두 언제든지 실시간으로 테스트 가능. 테스트 브랜치 사용 이슈 해결
+### Inefficient FE-BE connection test
+- Can run only one server at the same time
+  - 💡 We changed port number of test branch
     
-### Dao Layer 에서 트랜잭션(Query Runner) 이 간헐적으로 비정상적으로 동작한다.
-- FE 연결테스트 반복 시 간헐적으로 에러 발생
-    - ☠️ 원인을 알 수 없고 문제가 해결되지 않음. 추후 트러블슈팅 필요 😂
+- We had to wait until our supervisor feedbacks to the pull request and merges to the main branch
+    
+- There are many sub branches. So when we had some module test, we had to checkout sub branches often
+  - 💡 We made test branch & merge all sub branches to the test branch
+    
+- If the main branch and test branch are run at the same time, the debugger is attached to the test branch process instead of the main branch (can't debug).
+- Switching test branches makes interrupt, also it's annoying to integrate the code.
+  - 💡 Create an AWS EC2 instance and pull source code from the GitHub repository using git
+    - Real-time testing is available
+    
+### API Documentation
+- I don't know what API I developed because I developed more than 20 😂
+  - 💡 Let's try API documentation tool
+    - Create Postman Team Workspace and invite team members
+    - Check the updated API information in Postman
+    
+### Spaghetti code 🍝
+- Too many bugs 🐞
+    - 💡 TDD (ex : Jest)
+    - 💡 When reporting issues from FE to BE, report error status code and error message.
+        - It is helpful to catch issue quickly
+    
+</details>
 
-### Multer 테스트 시 Postman 에서 Malform Header 이슈 발생
-  - 💡 Postman 자체 버그이므로 Insomenia 를 이용하여 해결
+<br>
+
+## 🤔 Future Works (Trouble Shooting)
+
+<details>
+    <summary>Read more</summary>
+ 
+### In the Dao Layer, Transaction(Query Runner) often works abnormally.
+- ☠️ The reason is unknown and the problem is not resolved... 😂
+   
+### When we tried VScode SSH remote debugging to AWS EC2 server, server responded very late.
+- ☠️ The reason is unknown...
     
-### AWS EC2 서버에 VScode SSH Remote 시도할 경우 서버 응답이 현저히 느려지는 이슈
-- ☠️ 원인을 알 수 없음. 추후 트러블슈팅 필요
+### API Documentation Tool
+- Malform Header error is occured when Multer tested with Postman
+  - 💡 Postman's own bug so we used Insomenia instead.
+- Is the Postman the best?
+    - 💡 We can try other API documentation tool than Postman / Insomenia
+        - ex) Swagger
     
-### API 관리
-- 작성한 API 가 20개가 넘으니 나도 내가 무엇을 개발했는지 모른다 😂
-  - 💡 문서화 툴을 적극 활용한다
-    - Postman Team Workspace 를 생성 후 모든 팀원 초대
-    - Postman 에서 모든 API 정보를 실시간으로 확인할 수 있도록 함
-- 💡 Postman 이외에 다른 API Documentation 툴을 시도해 볼 수 있다.
-    - ex) Swagger
-    
-### 개발 완성도
-- 개발 후 테스트해보니 버그가 너무 많다 🐞
-    - 💡 개발 단계에서 Jest 등을 이용하여 코드를 테스트한다.
-    - 💡 FE 에서 BE 에 이슈 전달 시 Error status code 와 Error message 를 명확하게 전달하여 빠른 이슈 파악을 돕는다.
+
 
 </details>
