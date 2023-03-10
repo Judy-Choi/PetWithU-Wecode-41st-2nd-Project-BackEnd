@@ -2,7 +2,7 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/53294075/218286832-8953f862-d778-4ba3-a01d-e2e3fd9d54dd.png" width = "400px"></p>
 
 Hi, we are team 'PetWithU'! 🤗
-- 'PetWithU" is the final project team name and our service name consisting of students from the 41th Wecode Coding Boot Camp.
+- 'PetWithU" is the final project team name and our service name consisting of students from the 41st Wecode Coding Boot Camp.
 - It is an application that provides community services and sells pet products to users who have pets.
 - We clone-coded the '[Today's house](https://ohou.se/)' web site.
     - 'Today's house' is an interior platform service launched by a Korean startup that provides all the services for interior design, from online housewarming contents to stores and expert construction services.
